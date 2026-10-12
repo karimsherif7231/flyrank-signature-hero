@@ -1,6 +1,6 @@
 # Karim Sherif — Signature Hero
 
-A fullscreen WebGL hero built around a custom, slow aurora shader. The live page is served from this `docs/` folder by GitHub Pages.
+A fullscreen WebGL hero built around a custom, slow aurora shader. The live page is served from the repository root by GitHub Pages.
 
 ## Shader walkthrough
 
@@ -16,6 +16,10 @@ The vertex shader covers the screen with two triangles. The fragment shader comp
 ## Performance and reduced motion
 
 Device pixel ratio is capped at 1.5. Rendering pauses while the tab is hidden. With `prefers-reduced-motion: reduce`, the page draws one frame at `u_time = 0`; when WebGL is unavailable, CSS provides a static gradient.
+
+## Fallback one-liner
+
+Reduced motion draws one static shader frame; hidden tabs stop rendering, DPR is capped at 1.5, and browsers without WebGL use the CSS gradient.
 
 ## Run locally
 

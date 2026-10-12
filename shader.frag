@@ -1,4 +1,6 @@
-precision mediump float;uniform vec2 u_resolution;uniform vec2 u_mouse;uniform float u_time;varying vec2 v_uv;
+precision mediump float;
+// u_resolution scales coordinates, u_mouse adds a pointer glow, and u_time animates the waves.
+uniform vec2 u_resolution;uniform vec2 u_mouse;uniform float u_time;varying vec2 v_uv;
 // Hash gives each pixel stable variation for the finishing grain.
 float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 void main(){
